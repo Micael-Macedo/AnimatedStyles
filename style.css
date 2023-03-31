@@ -50,8 +50,11 @@ body section {
   margin: 0 auto;
   padding: 5%;
 }
+body section h1 {
+  text-align: center;
+}
 body section h2, body section h1 {
-  font-size: 3rem;
+  font-size: 2.6rem;
   margin-bottom: 30px;
 }
 body section p {
@@ -63,10 +66,21 @@ body section .mainSection {
   align-items: center;
   flex-direction: column-reverse;
 }
-body section .mainSection img {
-  width: 90%;
+body section .mainSection div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body section .mainSection div img {
+  width: 72%;
   border: 20px solid #202020;
   border-radius: 50%;
+}
+body section .mainSection div.buttonOptions {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 body section .content {
   display: flex;
@@ -117,7 +131,7 @@ body section .listSkills {
   min-width: 70%;
   gap: 80px;
   flex-wrap: wrap;
-  padding: 10% 0%;
+  padding: 10% 5%;
   background-color: #333333;
 }
 body section .listSkills div {
@@ -138,6 +152,7 @@ body section .occupation {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  gap: 15px;
 }
 body section .occupation .cardOccupation {
   display: flex;
@@ -149,6 +164,7 @@ body section .occupation .cardOccupation {
   width: 300px;
   height: 241px;
   background-color: #212121;
+  cursor: pointer;
 }
 body section .occupation .cardOccupation h3 {
   font-weight: 500;
@@ -158,6 +174,7 @@ body section .occupation .cardOccupation h3 {
 }
 body section form {
   margin: auto;
+  width: 100%;
 }
 body section form div {
   width: 100%;
@@ -185,6 +202,11 @@ body section form div.form-inline {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 15px;
+  margin-bottom: 10px;
+}
+body section form div.form-inline input {
+  max-width: 100%;
+  width: 100%;
 }
 
 button {
@@ -197,15 +219,11 @@ button.primary {
   border: none;
 }
 
-.buttonOptions {
-  display: flex;
-  justify-content: space-between;
-}
-
 footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 5vh;
 }
 
 @media (min-width: 450px) {
@@ -218,5 +236,27 @@ footer {
     max-width: 100%;
     border: 20px solid #202020;
     border-radius: 50%;
+  }
+}
+@media (min-width: 768px) {
+  form div.form-inline input {
+    max-width: 330px !important;
+  }
+  div.buttonOptions {
+    justify-content: center !important;
+  }
+}
+@media (min-width: 1000px) {
+  header nav .mobile {
+    display: none !important;
+  }
+  header nav .desktop {
+    display: flex !important;
+  }
+  form {
+    width: 70% !important;
+  }
+  form div.form-inline input {
+    max-width: 400px !important;
   }
 }/*# sourceMappingURL=style.css.map */

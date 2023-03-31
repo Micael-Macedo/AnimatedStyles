@@ -17,7 +17,12 @@ $('.listSkills div').mouseout( function () {
     $(this).removeClass("animate__animated animate__bounceIn");
 });
 $('.mobile button').click(function () { 
-    $('mobil')
     $('.mobile i').toggleClass("fa-bars");
     $('.mobile i').toggleClass("fa-x animate__animated animate__fadeIn");
+});
+$('.cardOccupation').hover( function () {
+    $(this).addClass("animate__animated animate__jello");
+})
+$('.cardOccupation').mouseout( function () {
+    $(this).removeClass("animate__animated animate__jello");
 });
